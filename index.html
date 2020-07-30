@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <title>YUP Team Generator 3000</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css">
+        <h1>YUP Team Generator 3000</h1>
+        <p>this thing generates even teams and then rescrambles them to give new even teams that are as different as possible.</p>
+        <div class = "box">
+            enter camper name and level (1-3):  <input onfocus = "this.value=''" id = "name"><input onfocus = "this.value=''" type = "number" style = "width: 25px" id = "level">
+            <button onclick="appendCamper();">add camper to list</button>
+            <button onclick="clearLatest();">clear latest camper</button>
+            <button onclick = "location.reload();">reset</button>
+            <button onclick ="fillMallard();">mallard</button>
+            <br>
+            <br>
+            <button id = "gen" onclick="generateTeams();">generate 4 teams</button>
+            <button id = "gen2" onclick = "generateTeamsSix();">generate 6 teams</button>
+            <button id = "resetTeams" onclick="clearTeams();">clear teams</button>
+            <button id = "scram" onclick="rescramble();" disabled = "true">rescramble teams</button> (3 combinations)
+        </div>
+        <br><br>
+        <div class = "list">
+            <span style = "font-weight: bold">Campers:</span>
+            <ol id = "campers">
+            </ol>
+        </div>
+        <br>
+        <div class = "lists">
+            <span class = "a">
+                <span style = "font-weight: bold;">Team 1:</span>
+                <ul id = "team1">
+                    
+                </ul>
+            </span>
+            <span class = "a">
+                <span style = "font-weight: bold;">Team 2:</span>
+                <ul id = "team2">
+                    
+                </ul>
+            </span>
+            <span class = "a">
+                <span style = "font-weight: bold;">Team 3:</span>
+                <ul id = "team3">
+                    
+                </ul>
+            </span>
+            <span class = "a">
+                <span style = "font-weight: bold;">Team 4:</span>
+                <ul id = "team4">
+                    
+                </ul>
+            </span>
+            <span class = "a">
+                <span style = "font-weight: bold;">(Team 5:)</span>
+                <ul id = "team5">
+                        
+                </ul>
+            </span>
+            <span class = "a">
+                    <span style = "font-weight: bold;">(Team 6:)</span>
+                    <ul id = "team6">
+                            
+                    </ul>
+            </span>
+        </div>
+    </body>
+    <script src = "app.js"></script>
+</html>
